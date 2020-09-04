@@ -11,6 +11,15 @@ class CocktailsController < ApplicationController
         @cocktail = Cocktail.find(params[:id])
     end
 
+    # def edit
+    #     @cocktail = Cocktail.find(params[:id])
+    # end
+
+    # def update
+    #     @cocktail.update(cocktail_params)
+    #     redirect_to task_path(@task)
+    # end
+
     def create
         @cocktail = Cocktail.new(cocktail_params)
         if @cocktail.save
@@ -29,6 +38,6 @@ class CocktailsController < ApplicationController
     private
 
     def cocktail_params
-        params.require(:cocktail).permit(:name)
+        params.require(:cocktail).permit(:name, :photo)
     end
 end
