@@ -17,7 +17,7 @@ class CocktailsController < ApplicationController
 
     # def update
     #     @cocktail.update(cocktail_params)
-    #     redirect_to task_path(@task)
+    #     redirect_to cocktail_path(@cocktail)
     # end
 
     def create

@@ -4,6 +4,15 @@ class DosesController < ApplicationController
         @dose = Dose.new
     end
 
+    def edit
+        @cocktail = Cocktail.find(params[:cocktail_id])
+    end
+
+    def update
+        @cocktail.update(dose_params)
+        redirect_to cocktail_path(@cocktail)
+    end
+
     def create
         @cocktail = Cocktail.find(params[:cocktail_id])
         @dose = Dose.new(dose_params)
