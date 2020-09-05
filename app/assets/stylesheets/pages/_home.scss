@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+body, html {
+    height: 100%;
+}
+  
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 35px;
+}
+
+
+.masthead {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-ghost {
+    color: #F2FDFF;
+    border: 1px solid #FEFFFF;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: lighter;
+}
