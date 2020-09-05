@@ -28,6 +28,19 @@ body, html {
 }
 
 
+.list:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 13px;
+    margin-top: 3px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
 .active, .btn-ghost:hover {
     background-color: #6E80EE;
 }
