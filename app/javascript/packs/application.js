@@ -16,3 +16,10 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import { initCollapseButtonOnClick } from '../components/button';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  initCollapseButtonOnClick();
+});

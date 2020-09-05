@@ -3,6 +3,7 @@ body, html {
     height: 100%;
 }
   
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -17,6 +18,7 @@ body, html {
     background-size: cover;
 }
 
+
 .btn-ghost {
     color: #F2FDFF;
     border: 1px solid #FEFFFF;
@@ -24,3 +26,18 @@ body, html {
     border-radius: 50px;
     font-weight: lighter;
 }
+
+
+.active, .btn-ghost:hover {
+    background-color: #6E80EE;
+}
+
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+
