@@ -6,11 +6,12 @@ class DosesController < ApplicationController
 
     def edit
         @cocktail = Cocktail.find(params[:cocktail_id])
+        @dose = Dose.find(params[:id])
     end
 
     def update
         @cocktail.update(dose_params)
-        redirect_to cocktail_path(@cocktail)
+        redirect_to cocktail_path(@cocktail), notice: 'Dose is succesfully updated.'
     end
 
     def create
@@ -33,7 +34,7 @@ class DosesController < ApplicationController
     private
 
     def dose_params
-        params.require(:dose).permit(:description, :ingredient_id)
+        params.require(:dose).permit(:description, :ingredient, :ingredient_id, :cocktail_id)
     end
         
 end
