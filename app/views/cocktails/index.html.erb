@@ -1,14 +1,7 @@
 <header class="masthead" style="background-image: url('<%= image_path 'background.jpg' %>');">
     <div class="container">
         <div class="cocktails">
-            <ul> 
-                <% @cocktails.each do |cocktail| %>
-                    <li><%= link_to cocktail.name, cocktail_path(cocktail) %> <%= link_to icon('far', 'trash-alt') ,
-                    cocktail_path(cocktail),
-                    method: :delete,
-                    data: { confirm: "Are you sure?" } %></li>
-                <% end %>
-            </ul>
+            <%= link_to "Cocktail List", cocktail_path(@cocktails), class: "btn btn-ghost" %>
         </div>
 
         <div class="add_cocktail">
