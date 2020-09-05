@@ -4,15 +4,18 @@ class DosesController < ApplicationController
         @dose = Dose.new
     end
 
-    def edit
-        @cocktail = Cocktail.find(params[:cocktail_id])
-        @dose = Dose.find(params[:id])
-    end
+    # def edit
+    #     @cocktail = Cocktail.find(params[:cocktail_id])
+    #     @dose = Dose.find(params[:id])
+    # end
 
-    def update
-        @cocktail.update(dose_params)
-        redirect_to cocktail_path(@cocktail), notice: 'Dose is succesfully updated.'
-    end
+    # def update
+    #     @cocktail = Cocktail.find(params[:cocktail_id])
+    #     @dose = Dose.find(params[:id])
+    #     @dose.cocktail = @cocktail
+    #     @dose.cocktail.update(dose_params[:description])
+    #     redirect_to cocktail_path(@cocktail), notice: 'Dose is succesfully updated.'
+    # end
 
     def create
         @cocktail = Cocktail.find(params[:cocktail_id])
@@ -34,7 +37,7 @@ class DosesController < ApplicationController
     private
 
     def dose_params
-        params.require(:dose).permit(:description, :ingredient, :ingredient_id, :cocktail_id)
+        params.require(:dose).permit(:description, :ingredient_id)
     end
         
 end
