@@ -1,12 +1,14 @@
 <header class="masthead" style="background-image: url('<%= image_path 'background.jpg' %>');">
     <div class="container">
-        <div class="list_cocktail">
-            <%= link_to "Cocktail List", cocktail_path(@cocktails), class: "btn btn-ghost list" %>
-            <div class="content">
-                <ul> 
-                    <% @cocktails.each do |cocktail| %>
-                        <li><%= link_to cocktail.name, cocktail_path(cocktail) %> 
-                    <% end %>
+        <div class="dropdown">
+            <button class="btn btn-ghost dropdown-toggle" type="button" class="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cocktail List
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <ul class="each_cocktail"> 
+                <% @cocktails.each do |cocktail| %>
+                    <li class="dropdown-item"><%= link_to cocktail.name, cocktail_path(cocktail) %> 
+                <% end %>
                 </ul>
             </div>
         </div>
@@ -15,3 +17,15 @@
         </div>
     </div>
 </header>
+
+<%#
+    <div class="list_cocktail">
+        <%= link_to "Cocktail List", cocktail_path(@cocktails), class: "btn btn-ghost list" %>
+        <div class="content">
+            <ul> 
+                <% @cocktails.each do |cocktail| %>
+                    <li><%= link_to cocktail.name, cocktail_path(cocktail) %> 
+                <% end %>
+            </ul>
+        </div>
+    </div>

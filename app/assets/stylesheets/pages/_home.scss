@@ -21,25 +21,12 @@ body, html {
 
 .btn-ghost {
     color: #F2FDFF;
-    border: 1px solid #FEFFFF;
+    border: 1px solid #EE8DC3;
     padding: 8px 24px;
     border-radius: 50px;
     font-weight: lighter;
 }
 
-
-.list:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: white;
-    float: right;
-    margin-left: 13px;
-    margin-top: 3px;
-  }
-  
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
 
 .active, .btn-ghost:hover {
     background-color: #6E80EE;
@@ -54,3 +41,37 @@ body, html {
 }
 
 
+#list:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 13px;
+    margin-top: 3px;
+  }
+  
+.active:after {
+content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.show {
+    background-color: #140104;
+}
+
+a {
+    background-color: #140104;
+    list-style: none;
+    text-decoration: none;
+    color: #DAE1FE;
+}
+
+a:hover {
+    background-color: #E2386E;
+    color: #DAE1FE;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: #E2386E;
+    border-radius: 2px;
+}
