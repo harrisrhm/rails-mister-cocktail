@@ -1,8 +1,10 @@
 // Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap');
+
 body, html {
     height: 100%;
 }
-  
+
 
 .container {
     display: flex;
@@ -25,6 +27,8 @@ body, html {
     padding: 8px 24px;
     border-radius: 50px;
     font-weight: lighter;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
 }
 
 
