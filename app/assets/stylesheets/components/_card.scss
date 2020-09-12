@@ -9,6 +9,7 @@
   position: relative;
   margin-top: 10px;
 }
+
 .card-description {
   position: absolute;
   bottom: 10px;
@@ -39,4 +40,54 @@
   font-family: 'Dancing Script', cursive;
   color: white;
   padding-top: 40px;
+}
+
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip-infos {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  background-color: #999FFD;
+  width: 100%;
+}
+
+
+img.picture {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-image {
+  height: auto;
+  object-fit: cover;
+}
+
+#show-card {
+  margin-top: 200px;
+}
+
+#cocktail-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
 }
